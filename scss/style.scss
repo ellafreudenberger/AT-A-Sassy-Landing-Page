@@ -1,3 +1,6 @@
+@import 'utilities';
+@import "btnConfig";
+@import "config"
 
 * {
   box-sizing: border-box;
@@ -20,18 +23,11 @@ a {
 }
 
 .hero {
-  // This is where the bulk of the SCSS styling needs to be done
+  background-image: url('hero-image.jpg');
+  color: black;
+  text-align: center;
+  padding: 20px;}
 
-  // Take a look at the other files we've built already. How can they be useful here?
-
-  // Also, take time to review the features of SCSS we've already covered:
-  // 1. $variables
-  // 2. nesting (dont forget about the ampersand (&) parent selector!)
-  // 3. At-Rules
-}
-
-// This code is related to some of the aspects of SCSS we have yet to cover.
-// While you don't have to mess with it, it would be advisable to attempt to understand its functionality.
 $spaceamounts: (1,2,3,4,5);
 
 @each $space in $spaceamounts {
@@ -48,4 +44,12 @@ $spaceamounts: (1,2,3,4,5);
   .py-#{$space} {
     padding: #{$space}rem 0;
   }
+}
+
+@import 'nav';
+
+.nav {
+  background-color: #333;
+  color: black;
+
 }
